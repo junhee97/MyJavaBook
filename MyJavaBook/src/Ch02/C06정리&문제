@@ -25,16 +25,16 @@
 	
 	
 	맞는 코드인지 틀린 코드인지 확인 
-	byte var = 200;							( x )
-	char var='AB';							( x	)
+	byte var = 200;							( x ) - byte의 범위는 -128~127
+	char var='AB';							( x	) - char에는 하나의 문자만 가능
 	char var=65;							( o	)
-	long var=50000000000;					( x	)	
-	float var = 3.14						( o )
+	long var=50000000000;					( x	) - 상수풀에는 -2^15 ~ +2^15-1 (약 +-21억) 범위 내의 숫자만 가능
+	float var = 3.14						( x ) - 접미사 f 붙여야 함
 	double var = 100.0						( o	)
-	String var = "나의직업은 "개발자" 입니다.";	( x )
-	boolean var = 0;						( x	)
-	int v2 = 1e2;							( o )
-	float =1e2f;							( o	)
+	String var = "나의직업은 "개발자" 입니다.";	( x ) - 따옴표 안에 따옴표 쓰려면 '/' 사용
+	boolean var = 0;						( x	) - java에서는 true / false
+	int v2 = 1e2;							( x ) - 1e2 : 실수형이라서 int x
+	float =1e2f;							( x	) - 변수명 지정 x
 	
 	
 	
