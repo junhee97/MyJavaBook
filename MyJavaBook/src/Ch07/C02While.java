@@ -371,6 +371,75 @@ public class C02While {
 		//  *****
 		//   ***
 		//    *
+		//   ***
+		//  *****
+		// *******
+//		int i = 0;
+//		while (i < 7) {
+//			if (i < 4) {
+//				int j = 0;
+//				int k = 0;
+//				while (j < i) {
+//					System.out.print(" ");
+//					j++;
+//				}
+//				while (k < (4 - i) * 2 - 1) {
+//					System.out.print('*');
+//					k++;
+//				}
+//			} else {
+//				int j = 0;
+//				int k = 0;
+//				while (j < 6 - i) {
+//					System.out.print(" ");
+//					j++;
+//				}
+//				while (k < (2 * i) - 5) {
+//					System.out.print('*');
+//					k++;
+//				}
+//			}
+//			System.out.println();
+//			i++;
+//		}
+		
+		// 높이 h 입력 (홀수 입력이 전제)
+//		Scanner sc = new Scanner(System.in);
+//		int h = sc.nextInt();
+//		int i = 0;
+//		while (i < h) {
+//			if (i < (h / 2) + 1) {
+//				int j = 0;
+//				int k = 0;
+//				while (j < i) {
+//					System.out.print(" ");
+//					j++;
+//				}
+//				while (k < h - (2 * i)) {
+//					System.out.print('*');
+//					k++;
+//				}
+//			} else {
+//				int j = 0;
+//				int k = 0;
+//				while (j < h - 1 - i) {
+//					System.out.print(" ");
+//					j++;
+//				}
+//				while (k < 2 * i - (h - 2)) {
+//					System.out.print('*');
+//					k++;
+//				}
+//			}
+//			System.out.println();
+//			i++;
+//		}
+//		sc.close();
+		
+		// *******
+		//  *****
+		//   ***
+		//    *
 		//    *
 		//   ***
 		//  *****
@@ -405,37 +474,37 @@ public class C02While {
 //		}
 
 		// 높이 h 입력 (짝수 입력이 전제)
-		Scanner sc = new Scanner(System.in);
-		int h = sc.nextInt();
-		int i = 0;
-		while (i < h) {
-			if (i < (h / 2)) {
-				int j = 0;
-				int k = 0;
-				while (j < i) {
-					System.out.print(" ");
-					j++;
-				}
-				while (k < ((h / 2) - i) * 2 - 1) {
-					System.out.print('*');
-					k++;
-				}
-			} else {
-				int j = 0;
-				int k = 0;
-				while (j < (h - 1) - i) {
-					System.out.print(" ");
-					j++;
-				}
-				while (k < (2 * i) - (h - 1)) {
-					System.out.print('*');
-					k++;
-				}
-			}
-			System.out.println();
-			i++;
-		}
-		sc.close();
+//		Scanner sc = new Scanner(System.in);
+//		int h = sc.nextInt();
+//		int i = 0;
+//		while (i < h) {
+//			if (i < (h / 2)) {
+//				int j = 0;
+//				int k = 0;
+//				while (j < i) {
+//					System.out.print(" ");
+//					j++;
+//				}
+//				while (k < ((h / 2) - i) * 2 - 1) {
+//					System.out.print('*');
+//					k++;
+//				}
+//			} else {
+//				int j = 0;
+//				int k = 0;
+//				while (j < (h - 1) - i) {
+//					System.out.print(" ");
+//					j++;
+//				}
+//				while (k < (2 * i) - (h - 1)) {
+//					System.out.print('*');
+//					k++;
+//				}
+//			}
+//			System.out.println();
+//			i++;
+//		}
+//		sc.close();
 
 	}
 
