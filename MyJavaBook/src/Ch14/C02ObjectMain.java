@@ -1,0 +1,38 @@
+package Ch14;
+
+class C02Simple {
+	int n;
+
+	C02Simple(int n) {
+		this.n = n;
+	}
+
+	@Override
+	public boolean equals(Object obj) { // equals 재정의
+		if (obj instanceof C02Simple) {
+			C02Simple down = (C02Simple) obj;
+			return this.n == down.n;
+		}
+		return false;
+	}
+}
+
+public class C02ObjectMain {
+
+	public static void main(String[] args) {
+
+		C02Simple ob1 = new C02Simple(10);
+		C02Simple ob2 = new C02Simple(10);
+		C02Simple ob3 = new C02Simple(20);
+
+		System.out.println(ob1);
+		System.out.println(ob1.equals(ob2)); // 주소값을 비교하기 때문에 false - equals 재정의하면 n 값을 비교하기 때문에 true
+		System.out.println(ob1.equals(ob3)); // false
+
+		String str1 = new String("JAVA");
+		String str2 = new String("JAVA");
+		System.out.println(str1.equals(str2));
+
+	}
+
+}
