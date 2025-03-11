@@ -72,7 +72,7 @@ public class C10Main {
 
 	public static void main(String[] args) {
 
-		Seller seller = new Seller(100000, 100, 1000);
+		Seller seller = new Seller(10000, 100, 1000);
 
 		Buyer 홍길동 = new Buyer(10000, 0);
 		Buyer 노홍철 = new Buyer(5000, 0);
