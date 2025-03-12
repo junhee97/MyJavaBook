@@ -20,30 +20,23 @@ class GUI extends JFrame {
 		panel.setLayout(null);
 
 		// Component 참조변수명
-		// textarea = area1
-		// textarea's scroll = scroll1
-		// 파일로저장 : btn1
-		// 1:1요청 : btn2
-		// 대화기록보기 : btn3
-		// 입력 : input
-		// textfield : txt1
-		JTextArea area1 = new JTextArea();
-		JScrollPane scroll1 = new JScrollPane(area1);
+		JTextArea area1 = new JTextArea(); // textarea = area1
+		JScrollPane scroll1 = new JScrollPane(area1); // textarea's scroll = scroll1
 		scroll1.setBounds(20, 20, 200, 300);
 
-		JButton btn1 = new JButton("파일로저장");
+		JButton btn1 = new JButton("파일로저장"); // 파일로저장 : btn1
 		btn1.setBounds(240, 20, 120, 40);
 
-		JButton btn2 = new JButton("1:1 요청");
+		JButton btn2 = new JButton("1:1 요청"); // 1:1요청 : btn2
 		btn2.setBounds(240, 100, 120, 40);
 
-		JButton btn3 = new JButton("대화기록보기");
+		JButton btn3 = new JButton("대화기록보기"); // 대화기록보기 : btn3
 		btn3.setBounds(240, 180, 120, 40);
 
-		JButton input = new JButton("입력");
+		JButton input = new JButton("입력"); // 입력 : input
 		input.setBounds(240, 350, 120, 40);
 
-		JTextField txt1 = new JTextField();
+		JTextField txt1 = new JTextField(); // textfield : txt1
 		txt1.setBounds(20, 350, 200, 40);
 
 		// Panel(Component)
