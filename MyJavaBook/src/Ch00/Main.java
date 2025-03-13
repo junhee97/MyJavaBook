@@ -14,7 +14,7 @@ class Buyer {
 	public void payment(Seller seller, int money) { // 판매자에게 구매금액 전달 함수
 		this.myMoney -= money; 						// 전달한 금액만큼 보유 금액에서 차감
 		int applebuy = seller.receive(money); 		// 전달받은 사과개수
-		this.appleCnt = applebuy; 					// 현재 보유사과개수에 전달받은 사과개수 누적
+		this.appleCnt += applebuy; 					// 현재 보유사과개수에 전달받은 사과개수 누적
 	}
 
 	// toString
