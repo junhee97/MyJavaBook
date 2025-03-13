@@ -24,10 +24,10 @@ public class C05FileInputStreamMain {
 //		fin.close();
 
 		// fin.read([])
-		byte[] buf = new byte[1024];
+		byte[] buff = new byte[1024];
 		long sTime = System.currentTimeMillis();
 		while (true) {
-			int data = fin.read(buf);
+			int data = fin.read(buff);
 			if (data == -1)
 				break;
 //			System.out.print((char) data);

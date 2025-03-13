@@ -15,12 +15,12 @@ public class C04FileCopyMain {
 
 		StringBuffer buffer = new StringBuffer();
 
-		char[] buf = new char[1024]; // 1024byte
+		char[] buff = new char[1024]; // 1024byte
 
 		long startTime = System.currentTimeMillis();
-		while ((data = fin.read(buf)) != -1) {
+		while ((data = fin.read(buff)) != -1) {
 //			buffer.append((char) data);
-			buffer.append(buf);
+			buffer.append(buff);
 		}
 		long endTime = System.currentTimeMillis();
 		System.out.println("소요시간 : " + (endTime - startTime) + "ms");
