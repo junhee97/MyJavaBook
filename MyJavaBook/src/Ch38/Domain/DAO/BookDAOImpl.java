@@ -7,9 +7,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
+import Ch38.Domain.DTO.BookDTO;
 import Ch38.Domain.DTO.UserDTO;
 
-public class UserDAOImpl {
+public class BookDAOImpl {
 
 	// DB Attr
 	private Connection conn;
@@ -21,32 +22,32 @@ public class UserDAOImpl {
 	private String url = "jdbc:mysql://localhost:3306/bookDB";
 
 	// 싱글톤 패턴처리
-	private static UserDAOImpl instance;
+	private static BookDAOImpl instance;
 
-	private UserDAOImpl() throws SQLException, ClassNotFoundException {
+	private BookDAOImpl() throws SQLException, ClassNotFoundException {
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		conn = DriverManager.getConnection(url, id, pw);
-		System.out.println("UserDAOImpl DB Connection Success");
+		System.out.println("BookDAOImpl DB Connection Success");
 	};
 
-	public static UserDAOImpl getInstance() throws ClassNotFoundException, SQLException {
+	public static BookDAOImpl getInstance() throws ClassNotFoundException, SQLException {
 		if (instance == null)
-			instance = new UserDAOImpl();
+			instance = new BookDAOImpl();
 		return instance;
 	}
 
 	// CRUD
-	public int insert(UserDTO userDto) throws SQLException {
+	public int insert(BookDTO bookDto) throws SQLException {
 		try {
-			pstmt = conn.prepareStatement("insert into tbl_user values(?,?,?,?)");
-			pstmt.setString(1, userDto.getUserid());
-			pstmt.setString(2, userDto.getUsername());
-			pstmt.setString(3, userDto.getPassword());
-			pstmt.setString(4, userDto.getRole());
+			pstmt = conn.prepareStatement("insert into tbl_book values(?,?,?,?)");
+			pstmt.setString(1, bookDto.getBookCode());
+			pstmt.setString(2, bookDto.getBookName());
+			pstmt.setString(3, bookDto.getPublisher());
+			pstmt.setString(4, bookDto.getIsbn());
 			return pstmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
-			throw new SQLException("USERDAO's INSERT SQL EXCEPTION!!");
+			throw new SQLException("BOOKDAO's INSERT SQL EXCEPTION!!");
 		} finally {
 			try {
 				pstmt.close();
@@ -55,14 +56,14 @@ public class UserDAOImpl {
 		}
 	}
 
-	public int update(UserDTO userDto) throws SQLException {
+	public int update(BookDTO bookDto) throws SQLException {
 		try {
 			pstmt = conn.prepareStatement("");
 
 			return pstmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
-			throw new SQLException("USERDAO's UPDATE SQL EXCEPTION!!");
+			throw new SQLException("BOOKDAO's UPDATE SQL EXCEPTION!!");
 		} finally {
 			try {
 				pstmt.close();
@@ -71,14 +72,14 @@ public class UserDAOImpl {
 		}
 	}
 
-	public int delete(UserDTO userDto) throws SQLException {
+	public int delete(BookDTO bookDto) throws SQLException {
 		try {
 			pstmt = conn.prepareStatement("");
 
 			return pstmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
-			throw new SQLException("USERDAO's DELETE SQL EXCEPTION!!");
+			throw new SQLException("BOOKDAO's DELETE SQL EXCEPTION!!");
 		} finally {
 			try {
 				pstmt.close();
@@ -88,12 +89,12 @@ public class UserDAOImpl {
 	}
 
 	// 단건 조회
-	public UserDTO select(UserDTO userDto) {
+	public BookDTO select(BookDTO bookDto) {
 		return null;
 	}
 
 	// 다건 조회
-	public List<UserDTO> selectAll() {
+	public List<BookDTO> selectAll() {
 		return null;
 	}
 
