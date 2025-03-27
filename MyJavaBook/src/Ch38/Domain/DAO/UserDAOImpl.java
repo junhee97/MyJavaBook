@@ -24,6 +24,7 @@ public class UserDAOImpl {
 	private static UserDAOImpl instance;
 
 	private UserDAOImpl() throws SQLException, ClassNotFoundException {
+		System.out.println("[DAO] UserDAOImpl init...");
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		conn = DriverManager.getConnection(url, id, pw);
 		System.out.println("UserDAOImpl DB Connection Success");

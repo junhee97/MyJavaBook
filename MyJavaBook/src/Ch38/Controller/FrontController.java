@@ -28,6 +28,9 @@ public class FrontController {
 		// 인증요청 API
 		map.put("/user", new UserController());
 
+		// 도서요청 API
+		map.put("/book", new BookController());
+
 	}
 
 	// View 로 부터 전달하는 요청 처리
