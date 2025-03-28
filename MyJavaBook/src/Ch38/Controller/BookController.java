@@ -11,7 +11,7 @@ public class BookController implements SubController {
 	// BookServiceImpl 연결
 	private BookServiceImpl bookService;
 
-	Map<String, Object> response = new HashMap();
+	Map<String, Object> response;
 
 	public BookController() {
 		try {
@@ -56,7 +56,7 @@ public class BookController implements SubController {
 					return response;
 				}
 				// 03 관련 서비스 실행
-				boolean isSuccess = bookService.bookJoin(bookDto);
+				boolean isSuccess = bookService.bookRegistration(bookDto);
 
 				// 04 뷰로 이동(or 내용전달)
 				if (isSuccess) {

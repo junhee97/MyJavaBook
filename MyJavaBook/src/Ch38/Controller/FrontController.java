@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class FrontController {
 
-	// 서브컨트롤러 자장 자료구조("/endPint" : 서브컨트롤러 객체)
+	// 서브컨트롤러 저장 자료구조("/endPint" : 서브컨트롤러 객체)
 	private Map<String, SubController> map = new HashMap();
 
 	// 싱글톤

@@ -2,13 +2,14 @@ package Ch38.Domain.SERVICE;
 
 import java.sql.SQLException;
 
+import Ch38.Domain.DAO.BookDAO;
 import Ch38.Domain.DAO.BookDAOImpl;
 import Ch38.Domain.DTO.BookDTO;
 
 public class BookServiceImpl {
 
 	//
-	private BookDAOImpl bookDao;
+	private BookDAO bookDao;
 
 	// 싱글톤
 	private static BookServiceImpl instance;
@@ -25,7 +26,7 @@ public class BookServiceImpl {
 	}
 
 	// 도서 등록
-	public boolean bookJoin(BookDTO bookDto) throws SQLException {
+	public boolean bookRegistration(BookDTO bookDto) throws Exception {
 		return bookDao.insert(bookDto) > 0;
 	}
 
